@@ -20,13 +20,13 @@ module.exports = {
                     'vue-style-loader',
                     'css-loader',
                     'less-loader',
-                    {
-                        loader: 'style-resources-loader',
-                        options: {
-                            patterns: [path.resolve(__dirname, './styles/*.less')],
-                            injector: 'append'
-                        }
-                    }
+                    // {
+                    //     loader: 'style-resources-loader',
+                    //     options: {
+                    //         patterns: [path.resolve(__dirname, './styles/*.less')],
+                    //         injector: 'append'
+                    //     }
+                    // }
                 ]
             }
         ]
