@@ -46,7 +46,7 @@ module.exports = {
         new VueLoaderPlugin()
     ],
     output: {
-        path: '/var/www/proxodymets2/public/',
+        path: path.resolve(__dirname, './public/'),
         filename: 'proxodymets.js'
     }
 }
