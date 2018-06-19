@@ -1,5 +1,10 @@
 <template>
 <div class="main-box">
+    <header class="header">
+        <div class="header__section left"></div>
+        <div class="header__section center"></div>
+        <div class="header__section right"></div>
+    </header>
     <div class="main-box__side left" :style="{width: x + 'px'}">
         <div class="content" :style="{width: windowWidth - 300 + 'px'}">
             asdfasdfb ыл вафлывг пафлыовпалфыпвалгфынпвгланпфыловрап офынвп аофлырвап лофы
@@ -13,6 +18,11 @@
     <div class="splitter">
         <input type="range" :min="min" :max="max" v-model="x">
     </div>
+    <footer class="footer">
+        <div class="footer__section left"></div>
+        <div class="footer__section center"></div>
+        <div class="footer__section right"></div>
+    </footer>
 </div>
 </template>
 
@@ -63,6 +73,79 @@ body {
     padding: 0; margin: 0;
 }
 
+.header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    // background-color: brown;
+    top: 0;
+    margin: 10px 0 0 0;
+    // padding: 0 20px;
+    z-index: 100;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__section {
+
+        &.left {
+            width: 220px;
+            height: 50px;
+            background-color: red;
+        }
+
+        &.center {
+            width: 103px;
+            height: 100px;
+            background-image: url(/icons/proho-logo.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        &.right {
+            width: 220px;
+            height: 50px;
+            background-color: blue;
+        }
+    }
+}
+
+.footer {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    // background-color: brown;
+    bottom: 0;
+    margin: 0 0 10px 0;
+    // padding: 0 20px;
+    z-index: 100;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    &__section {
+
+        &.left {
+            width: 80px;
+            height: 40px;
+            background-color: red;
+        }
+
+        &.center {
+            width: 100px;
+            height: 34px;
+            background-color: green;
+            border-radius: 100px;
+        }
+
+        &.right {
+            width: 80px;
+            height: 40px;
+            background-color: blue;
+        }
+    }
+}
+
 #proxodymets {
     height: 100%;
 }
@@ -99,7 +182,7 @@ body {
         }
 
         .content {
-            padding: 0 3vw;
+            padding: 150px 3vw 100px 3vw;
             box-sizing: border-box;
             text-align: left;
         }
